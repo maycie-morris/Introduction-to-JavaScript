@@ -97,15 +97,15 @@ dogFeeder(15, 1)
 function rockPaperScissors(choice) {
   var rng = Math.random()
 
-if (rng < .34) {
-  console.log("rock")
-}
-else if (rng <= .67) {
-  console.log("paper")
-}
-else {
-  console.log("scissors")
-}
+  if (rng < .34) {
+    console.log("rock")
+  }
+  else if (rng <= .67) {
+    console.log("paper")
+  }
+  else {
+    console.log("scissors")
+  }
 }
 
 rockPaperScissors("rock")
@@ -135,7 +135,24 @@ ftConverter(1)
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
 
+function bottlesOfSoda() {
+  let sodaBottles;
+  let bottlesLeft;
+  for (i = 99; i >= 1; i--) {
+    if (i == 1) {
+      sodaBottles = "bottle";
+      bottlesLeft = "No bottles of soda on the wall!";
+    } else {
+      sodaBottles = "bottles";
+      bottlesLeft = i - 1 + " bottles of soda on the wall!";
+    } console.log(i + " " + sodaBottles + " of soda on the wall,");
+    console.log(i + " " + sodaBottles + " of soda,");
+    console.log("Take one down, pass it around,");
+    console.log(bottlesLeft);
+  }
+}
 
+console.log(bottlesOfSoda());
 
 
 
