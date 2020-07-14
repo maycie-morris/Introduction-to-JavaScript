@@ -95,7 +95,7 @@ dogFeeder(15, 1)
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
 function rockPaperScissors(choice) {
-  var rng = Math.random()
+  let rng = Math.random()
 
   if (rng < .34) {
     console.log("rock")
@@ -165,7 +165,24 @@ console.log(bottlesOfSoda());
 //60s should be D 
 //and anything below 60 should be F
 
+function gradeCalculator(mark) {
+  let score = mark
+  let grade = ((score / 100) * 100)
 
+  if (grade >= 90) {
+    console.log('Your score is an A');
+  } else if (grade >= 80) {
+    console.log('Your score is a B');
+  } else if (grade >= 70) {
+    console.log('Your score is a C');
+  } else if (grade >= 60) {
+    console.log('Your score is a D');
+  } else {
+    console.log('Your score is an F');
+  }
+}
+
+gradeCalculator(90)
 
 
 
