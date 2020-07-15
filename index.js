@@ -1,7 +1,7 @@
 /************************************************************** Task 1: Warm-up! **************************************************************/
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
 
-var votingAge = 19
+let votingAge = 19
 
 if (votingAge > 18) {
   console.log(true);
@@ -10,7 +10,7 @@ if (votingAge > 18) {
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
 
 let dog = 'Magnus'
-var cat = 'Oskar'
+let cat = 'Oskar'
 
 if (cat.length > 4) {
   dog = 'Max'
@@ -106,6 +106,7 @@ function rockPaperScissors(choice) {
   else {
     console.log("scissors")
   }
+
 }
 
 rockPaperScissors("rock")
@@ -191,7 +192,20 @@ gradeCalculator(90)
 // Hint - you may need to study tomorrow's traning kit on arrays 
 // try looking up the .includes() method
 
+const vowel = ["a", "e", "i", "o", "u"]
 
+function vowelCount(text) {
+  let counter = 0;
+
+  for (let letter of text.toLowerCase()) {
+    if (vowel.includes(letter)) {
+      counter++
+    }
+  }
+  return counter
+}
+
+vowelCount('This is a string with UppErcAsE')
 
 
 
@@ -202,4 +216,22 @@ gradeCalculator(90)
 
 
 
+function rockPaperScissors(choice) {
+  let rng = Math.random()
+
+  if (rng < .34) {
+    console.log("rock")
+  }
+  else if (rng <= .67) {
+    console.log("paper")
+  }
+  else {
+    console.log("scissors")
+  }
+
+}
+
+let user = prompt('Please enter your name')
+
+rockPaperScissors("rock")
 
